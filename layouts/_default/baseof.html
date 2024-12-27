@@ -7,6 +7,7 @@
   <body>
     {{ block "main" . }}
     {{ end }}
+    <!-- show debug window in dev -->
     {{if not hugo.IsProduction}}
       {{ partial "debug/debug.html" (dict "context" .) }}
     {{end}}
