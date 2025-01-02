@@ -1,0 +1,30 @@
+{
+  "name": "barebones",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css:dev": "npx tailwindcss -i ./assets/css/main.css -o ./static/css/output.css --watch",
+    "build:css:prod": "npx tailwindcss -i ./assets/css/main.css -o ./static/css/output.css --minify",
+    "start": "concurrently \"hugo server\" \"npm run build:css:dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikrazz/barebones.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikrazz/barebones/issues"
+  },
+  "homepage": "https://github.com/nikrazz/barebones#readme",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}
